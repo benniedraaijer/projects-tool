@@ -1,5 +1,5 @@
 import { Flex } from '@chakra-ui/react'
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion/dist/index'
 import React from 'react'
 
 const FlexMotion = motion(Flex)
