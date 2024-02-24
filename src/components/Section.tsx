@@ -1,36 +1,40 @@
 import { Flex } from '@chakra-ui/react'
 import React from 'react'
 
-interface Style {
-  children?: any
-  padding?: string | string[]
-  zIndex?: number | number[]
-  top?: string | string[]
+interface Props {
   backgroundColor?: string | string[]
-  maxWidth?: string | string[]
-  margin?: string | string[]
+
   gridArea?: string | string[]
+  maxWidth?: string | string[]
   justify?: string | string[]
   rounded?: string | string[]
+  padding?: string | string[]
+  zIndex?: number | number[]
+  margin?: string | string[]
   shadow?: string | string[]
+  top?: string | string[]
+  inViewRef?: any
+  children?: any
+  check?: any
 }
 
-export const Section = ({ children, padding, zIndex, top, backgroundColor }: Style) => {
+export const Section = ({ children, inViewRef, padding, zIndex, top, backgroundColor, check }: Props) => {
   return (
     <Flex
       direction='column'
+      border={check && ['solid', 'solid red', 'solid green', 'solid yellow', 'solid purple', 'solid blue']}
       backgroundColor={backgroundColor && backgroundColor}
+      ref={inViewRef && inViewRef}
       zIndex={zIndex && zIndex}
-      position='relative'
       p={padding && padding}
-      top={top && top}
-      height='100%'
       justify='flex-start'
-      align='center'
-      flex='1 0 auto'
-      as='section'
+      top={top && top}
       minWidth='100%'
       maxWidth='100%'
+      flex='1 0 auto'
+      align='center'
+      height='100%'
+      as='section'
       width='100%'
     >
       {children}

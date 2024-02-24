@@ -1,7 +1,6 @@
 {
   "name": "@benniedraaijer/projects-tool",
-  "version": "1.0.1",
-  "private": true,
+  "version": "1.0.3",
   "description": "",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
